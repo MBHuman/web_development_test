@@ -45,9 +45,125 @@ html, body {
     display: flex;
     background: #231f20;
     color: aliceblue;
-    height: 70px;
+    height: 50px;
     margin-top: 20px;
     margin-right: 5%;
     margin-left: 5%;
     /* border: 2px solid red; */
+}
+
+/* MAIN CONTENT */
+.main_content {
+    display: flex;
+}
+
+.main_content .credit_cards {
+    flex: 1;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+.main_content .holdings {
+    flex: 1;
+    border-right: 1px solid red;
+    text-align: center;
+    background-color:#eb5017;
+    
+}
+
+.main_content .debet_card {
+    flex: 1;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+.main_content .insurance {
+    flex: 1;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+.main_content .friends {
+    flex: 1;
+    border-right: 1px solid red;
+    text-align: center;
+}
+
+.main_content .internet-bank {
+    flex: 1;
+    text-align: center;
+}
+
+/* NAVIGATION BAR */
+.navigation_bar {
+    margin-left: 7%;
+    display: flex;
+    margin-right: 7%;
+}
+
+/* CALCULATOR */
+.calculator {
+    margin-left: 7%;
+    margin-right: 37%;
+    /* border: 2px solid red; */
+    height: 280px;
+    background: #f2f2f2;
+}
+
+.calculator .calculator__header {
+    color: #eb5017;
+    padding-left: 15%;
+    margin-top: 1%;
+    font-family: "Arial";
+    font-size: 30px;
+    text-align: left;
+    /* border: 1px solid red; */
+}
+
+.parametrs {
+    /* border: 1px solid red; */
+    margin-right: 50%;
+    height: 55%;
+}
+
+.calc_block {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.calc_text {
+    text-align: right;
+    /* border: 1px solid red; */
+    flex: 1;
+}
+
+.calc_input {
+    padding-left: 5%;
+    flex: 1;
+    text-align: center;
+    height: 15px;
+    width: 40px;
+}
+
+.calculator_button {
+    margin-left: 20px;
+    display: flex;
+}
+
+.calc_button {
+    height: 50px;
+    width: 100px;
+    background-color: #8dd400;
+    border-radius: 10px;
+}
+.calc_1 {
+    flex: 1;
+
+}
+
+.calc_2 {
+    flex: 1;
+    margin-right: 400px;
+    font-size: small;
 }
