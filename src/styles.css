@@ -5,9 +5,7 @@ html, body {
 
 .wrapper {
     min-height: 100%;
-  
-    /* Equal to height of footer */
-    /* But also accounting for potential margin-bottom of last child */
+
     margin-bottom: -70px;
 }
 /* FOOTER */
@@ -23,10 +21,33 @@ html, body {
     display: flex;
     padding-left: 10%;
     padding-left: 5%;
-    padding-right: 30%;
+    padding-right: 40%;
     justify-content: space-between;
 }
 
 /* HEADER */
 
+.header {
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid red; */
+}
 
+.header .image__2 {
+    padding-top: 30px;
+    height: 40px;
+    width: static;
+}
+
+.main_content {
+    display: flex;
+    background: #231f20;
+    color: aliceblue;
+    height: 70px;
+    margin-top: 20px;
+    margin-right: 5%;
+    margin-left: 5%;
+    /* border: 2px solid red; */
+}
