@@ -106,7 +106,7 @@ html, body {
     margin-left: 7%;
     margin-right: 37%;
     /* border: 2px solid red; */
-    height: 280px;
+    height: 320px;
     background: #f2f2f2;
 }
 
@@ -122,8 +122,15 @@ html, body {
 
 .parametrs {
     /* border: 1px solid red; */
-    margin-right: 50%;
-    height: 55%;
+    display: flex;
+    /* padding-right: 50%;
+    height: 55%; */
+}
+/* CALCUATOR */
+
+/* INPUT DATA */
+.first_parametrs {
+    flex: 1;
 }
 
 .calc_block {
@@ -145,7 +152,35 @@ html, body {
     height: 15px;
     width: 40px;
 }
+/* INPUT DATA */
 
+/* SLIDERS */
+
+
+
+.second_parametrs {
+    flex: 1;
+
+    display: grid;
+}
+
+.slider_1 {
+    margin-top: 53px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+.slider_2 {
+    margin-top: 40px;
+    margin-left: 20px;
+    width: 300px;
+}
+
+
+/* SLIDERS */
+
+
+/* CALCULATE BUTTON AND TEXT */
 .calculator_button {
     margin-left: 20px;
     display: flex;
@@ -157,13 +192,15 @@ html, body {
     background-color: #8dd400;
     border-radius: 10px;
 }
-.calc_1 {
-    flex: 1;
 
+
+.calc_1 {    /* BUTTON */
+    flex: 1;
 }
 
-.calc_2 {
+.calc_2 { /* TEXT*/
     flex: 1;
     margin-right: 400px;
     font-size: small;
 }
+/* CALCULATE BUTTON AND TEXT */

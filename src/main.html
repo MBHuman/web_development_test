@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="styles.css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="script.js"></script> 
     </head>
 
     <body>
@@ -50,30 +51,58 @@
             <div class="calculator">
                 <h3 class="calculator__header">Калькулятор</h3>
                 <div class="parametrs">
-                    <div class="calc_block"> 
-                        <div class="calc_text"><p2>Дата оформления вклада</p2></div>
-                        <div class="calc_input"><input type="date"/></div>
+                    <div class="first_parametrs">
+                        <div class="calc_block"> 
+                            <div class="calc_text"><p2>Дата оформления вклада</p2></div>
+                            <div class="calc_input"><input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2020-08-15"/></div>
+                        </div>
+                        <div class="calc_block">
+                            <div class="calc_text"><p2>Сумма вклада</p2></div>
+                            <div class="calc_input"><input type="number" min="1000" max="3000000"></div>
+                            <!-- <div class="slider_1"><p>slider_1</p></div> -->
+                        </div>
+                        <div class="calc_block">
+                            <div class="calc_text"><p2>Срок вклада</p2></div>
+                            <div class="calc_input">
+                                <select>
+                                    <option checked="checked">1 год</option>
+                                    <option>2 года</option>
+                                    <option>3 года</option>
+                                    <option>4 года</option>
+                                    <option>5 лет</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="calc_block">
+                            <div class="calc_text"><p2>Пополнение вклада</p2></div>
+                            <div class="calc_input">
+                                <input type="radio" name="holding" checked="checked"> нет
+                                <input type="radio" name="holding"> да
+                            </div>
+                        </div>
+                        
+                        <div class="calc_block">
+                            <div class="calc_text"><p2>Сумма пополнения вклада</p2></div>
+                            <div class="calc_input"><input type="number" min="1000" max="3000000"></div>
+                            <!-- <div class="slider_2"><p>slider_2</p></div> -->
+                        </div>
+                        
                     </div>
-                    <div class="calc_block">
-                        <div class="calc_text"><p2>Сумма вклада</p2></div>
-                        <div class="calc_input"><input type="number"></div>
-                    </div>
-                    <div class="calc_block">
-                        <div class="calc_text"><p2>Срок вклада</p2></div>
-                        <div class="calc_input"><input ></div>
-                    </div>
-                    <div class="calc_block">
-                        <div class="calc_text"><p2>Пополнение вклада</p2></div>
-                        <div class="calc_input">
-                            <input type="radio" name="holding" checked="checked"> нет
-                            <input type="radio" name="holding"> да
+                    <!-- SLIDER -->
+                    <div class="second_parametrs">
+                        <div class="first_block_slider">
+                            <input class="slider_1" type="range" min="1000" max="3000000" step="1" value="1000" id="xxx">
+                        </div>
+
+                        <div class="second_block_slider">
+                            <input class="slider_2" type="range" min="1000" max="3000000" step="1" value="1000" id="xxx">
                         </div>
                     </div>
-                    <div class="calc_block">
-                        <div class="calc_text"><p2>Пополнение вклада</p2></div>
-                        <div class="calc_input"><input type="number>"></div>
-                    </div>
+                    <!-- SLIDER -->
                 </div>
+
+                
+
 
                 <div class="calculator_button">
                     
