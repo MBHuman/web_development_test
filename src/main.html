@@ -5,6 +5,9 @@
         <link rel="stylesheet" type="text/css" href="styles.css">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <script type="text/javascript" src="script.js"></script> 
+        <!-- <script type="text/javascript" src="../frameworks/jquery.js"></script> -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     </head>
 
     <body>
@@ -54,11 +57,25 @@
                     <div class="first_parametrs">
                         <div class="calc_block"> 
                             <div class="calc_text"><p2>Дата оформления вклада</p2></div>
-                            <div class="calc_input"><input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2020-08-15"/></div>
+							<div class="calc_input">
+								<!--  -->
+                                    <input type="text" id="datepicker">
+                                        <script>
+                                            $(function() {
+                                                $("#datepicker").datepicker({
+                                                    
+                                                });
+                                            });
+                                        </script>
+                                    </input>
+
+                                    <?php echo 'А это будет обработано.'; ?>
+								<!-- </input> -->
+							</div>
                         </div>
                         <div class="calc_block">
                             <div class="calc_text"><p2>Сумма вклада</p2></div>
-                            <div class="calc_input"><input type="number" min="1000" max="3000000"></div>
+                            <div class="calc_input"><input class="first_calc_input" id="first_slider_calc" type="number" min="1000" max="3000000"></div>
                             <!-- <div class="slider_1"><p>slider_1</p></div> -->
                         </div>
                         <div class="calc_block">
@@ -83,7 +100,7 @@
                         
                         <div class="calc_block">
                             <div class="calc_text"><p2>Сумма пополнения вклада</p2></div>
-                            <div class="calc_input"><input type="number" min="1000" max="3000000"></div>
+                            <div class="calc_input"><input class="second_calc_input" id="second_slider_calc" type="number" name="second" min="1000" max="3000000"></div>
                             <!-- <div class="slider_2"><p>slider_2</p></div> -->
                         </div>
                         
@@ -91,11 +108,40 @@
                     <!-- SLIDER -->
                     <div class="second_parametrs">
                         <div class="first_block_slider">
-                            <input class="slider_1" type="range" min="1000" max="3000000" step="1" value="1000" id="xxx">
+                            <input class="slider_1" id="first_slider_range" type="range" min="1000" max="3000000" step="1000" value="1000">
+                            <script>
+                                var first_range = document.getElementById("first_slider_range");
+                                var first_calc = document.getElementById("first_slider_calc")
+
+                                first_range.oninput = function(e) {
+                                    var event = new CustomEvent('sync', {
+                                        detail: first_range.value
+                                    })
+                                    first_range.dispatchEvent(event);
+                                }
+
+                                first_range.addEventListener('sync', function(e) {
+                                    first_calc.value = e.detail
+                                })
+                            </script>
                         </div>
 
                         <div class="second_block_slider">
-                            <input class="slider_2" type="range" min="1000" max="3000000" step="1" value="1000" id="xxx">
+                            <input class="slider_2" id="second_slider_range" type="range" min="1000" max="3000000" step="1000" value="1000">
+                            <script>
+                                var second_range = document.getElementById("second_slider_range");
+                                var second_calc = document.getElementById("second_slider_calc")
+                                second_range.oninput = function(e) {
+                                    var event = new CustomEvent('sync', {
+                                        detail: second_range.value
+                                    })
+                                    second_range.dispatchEvent(event);
+                                }
+
+                                second_range.addEventListener('sync', function(e) {
+                                    second_calc.value = e.detail
+                                })
+                            </script>
                         </div>
                     </div>
                     <!-- SLIDER -->
