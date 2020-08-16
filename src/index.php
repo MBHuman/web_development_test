@@ -16,8 +16,8 @@
         <!-- content -->
         <div class="wrapper">
             <div class="header">
-                <img class="image__1" src="https://sun9-52.userapi.com/c858120/v858120310/2339a9/f5BGpM4rNBA.jpg"> 
-                <img class="image__2" src="https://sun9-73.userapi.com/c858120/v858120310/2339b0/8eEM2kmMw0E.jpg">                  
+                <img class="image__1" src="../images/bank.png">
+                <img class="image__2" src="../images/phone_number.png">    
             </div>
 
             <div class="menu">
@@ -50,7 +50,7 @@
                 <p> - </p>
                 <p>Калькулятор</p>
             </div>
-
+            <form method="post" action="">
             <div class="calculator">
                 <h3 class="calculator__header">Калькулятор</h3>
                 <div class="parametrs">
@@ -58,28 +58,25 @@
                         <div class="calc_block"> 
                             <div class="calc_text"><p2>Дата оформления вклада</p2></div>
 							<div class="calc_input">
-								<!--  -->
-                                    <input type="text" id="datepicker">
-                                        <script>
-                                            $(function() {
-                                                $("#datepicker").datepicker({
-                                                    
-                                                });
+                                <input type="text" id="datepicker" name="date">
+                                    <script>
+                                        $(function() {
+                                            $("#datepicker").datepicker({
+                                                
                                             });
-                                        </script>
-                                    </input>
-								<!-- </input> -->
+                                        });
+                                    </script>
+                                </input>
 							</div>
                         </div>
                         <div class="calc_block">
                             <div class="calc_text"><p2>Сумма вклада</p2></div>
-                            <div class="calc_input"><input class="first_calc_input" id="first_slider_calc" type="number" min="1000" max="3000000"></div>
-                            <!-- <div class="slider_1"><p>slider_1</p></div> -->
+                            <div class="calc_input"><input class="first_calc_input" name="calc_text" id="first_slider_calc" type="number" min="1000" max="3000000"></div>
                         </div>
                         <div class="calc_block">
                             <div class="calc_text"><p2>Срок вклада</p2></div>
                             <div class="calc_input">
-                                <select>
+                                <select name="deposit">
                                     <option checked="checked">1 год</option>
                                     <option>2 года</option>
                                     <option>3 года</option>
@@ -98,7 +95,7 @@
                         
                         <div class="calc_block">
                             <div class="calc_text"><p2>Сумма пополнения вклада</p2></div>
-                            <div class="calc_input"><input class="second_calc_input" id="second_slider_calc" type="number" name="second" min="1000" max="3000000"></div>
+                            <div class="calc_input"><input class="second_calc_input" name="deposit" id="second_slider_calc" type="number" name="second" min="1000" max="3000000"></div>
                             <!-- <div class="slider_2"><p>slider_2</p></div> -->
                         </div>
                         
@@ -144,9 +141,7 @@
                     </div>
                     <!-- SLIDER -->
                 </div>
-
-                
-
+                </form>
 
                 <div class="calculator_button">
                     
@@ -157,7 +152,7 @@
                     </div>
 
                     <div class="calc_2">
-                        <p>Результат: 102500 руб</p>
+                        <p id="result">Результат:</p>
                     </div>
                     <div class="credit_cards"></div>
                     <div class="holdings"></div>
